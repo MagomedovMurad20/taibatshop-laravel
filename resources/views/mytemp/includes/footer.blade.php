@@ -1,3 +1,4 @@
+
 <script src="js/script.js"></script>
 
 </body>
@@ -8,5 +9,3 @@
         </li>
     </ul>
 </footer>
-
-</html>

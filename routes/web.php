@@ -22,11 +22,11 @@ use App\Http\Controllers\AdminPageController;
 
 
 
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/costums', [CostumsPageController::class, 'index']);
-Route::get('/kurtki', [KurtkiPageController::class, 'index']);
-Route::get('/platya', [PlatyaPageController::class, 'index']);
-Route::get('/jempers', [JempersPageController::class, 'index']);
-Route::get('/signin', [SigninPageController::class, 'index']);
-Route::get('/signup', [SignupPageController::class, 'index']);
-Route::get('/admin', [AdminPageController::class, 'index']);
+Route::get('/', [HomeController::class, 'Index'])->name('/');
+Route::get('/costums', [CostumsPageController::class, 'index'])->name('/costums');
+Route::get('/kurtki', [KurtkiPageController::class, 'index'])->name('/kurtki');
+Route::get('/platya', [PlatyaPageController::class, 'index'])->name('/platya');
+Route::get('/jempers', [JempersPageController::class, 'index'])->name('/jempers');
+Route::get('/signin', [SigninPageController::class, 'index'])->name('/signin');
+Route::get('/signup', [SignupPageController::class, 'index'])->name('/signup');
+Route::get('/admin', [AdminPageController::class, 'index'])->name('/admin');

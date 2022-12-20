@@ -1,5 +1,6 @@
+@extends('mytemp.layouts.default')
+@section('content')
 <div class="container  ">
-
 <div id="center">
         <div class="product_item">
 
@@ -449,3 +450,4 @@
         </div>
 </div>
 </div>
+@endsection

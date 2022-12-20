@@ -8,6 +8,6 @@ class JempersPageController extends Controller
 {
     public function Index()
     {
-        return view('pages.jempers');
+        return view('mytemp.pages.jempers');
     }
 }

@@ -8,6 +8,6 @@ class CostumsPageController extends Controller
 {
     public function Index()
     {
-        return view('pages.costums');
+        return view('mytemp.pages.costums');
     }
 }

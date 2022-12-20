@@ -8,6 +8,6 @@ class KurtkiPageController extends Controller
 {
     public function Index()
     {
-        return view('pages.kurtki');
+        return view('mytemp.pages.kurtki');
     }
 }

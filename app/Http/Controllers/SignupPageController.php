@@ -8,6 +8,6 @@ class SignupPageController extends Controller
 {
     public function Index()
     {
-        return view('pages.signup');
+        return view('mytemp.pages.signup');
     }
 }
