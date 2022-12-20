@@ -1,0 +1,1 @@
+@extends('mytemp.layouts.default')

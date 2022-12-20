@@ -8,6 +8,6 @@ class AdminPageController extends Controller
 {
     public function Index()
     {
-        return view('pages.admin');
+        return view('mytemp.pages.admin');
     }
 }

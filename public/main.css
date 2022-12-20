@@ -1,0 +1,1089 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption');
+
+
+
+/* topmenu */
+.top-menu {
+  position: relative;
+  background: #fff;
+  box-shadow: inset 0 0 10px #ccc;
+}
+
+.top-menu:before,
+.top-menu:after {
+  content: "";
+  display: block;
+  height: 1px;
+  border-top: 3px solid #575350;
+  border-bottom: 1px solid #575350;
+  margin-bottom: 2px;
+}
+
+.top-menu:after {
+  border-bottom: 3px solid #575350;
+  border-top: 1px solid #575350;
+  box-shadow: 0 2px 7px #ccc;
+  margin-top: 2px;
+}
+
+.menu-main {
+  list-style: none;
+  padding: 0 30px;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+  position: relative;
+}
+
+.menu-main:before,
+.menu-main:after {
+  content: "\25C8";
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu-main:before {
+  left: 15px;
+}
+
+.menu-main:after {
+  right: 15px;
+}
+
+.menu-main li {
+  display: inline-block;
+  padding: 5px 0;
+}
+
+.menu-main a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 2px 5px;
+  padding: 6px 15px;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 16px;
+  color: #777777;
+  border-bottom: 1px solid transparent;
+  transition: .3s linear;
+}
+
+.menu-main .current,
+.menu-main a:hover {
+  border-radius: 3px;
+  background: #f3ece1;
+  color: #313131;
+  text-shadow: 0 1px 0 #fff;
+  border-color: #c6c6c6;
+}
+
+@media (max-width: 500px) {
+  .menu-main li {
+    display: block;
+  }
+}
+
+
+/* Dropdown Button */
+.dropbtn {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #f3ece1;
+}
+
+
+/* sticky */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky+.content {
+  padding-top: 60px;
+}
+
+.content {
+  padding: 16px;
+}
+
+.form_select_category {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 10em;
+  top: 5em;
+}
+
+
+
+/* item */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1.5em;
+  margin-bottom: 10em;
+  ;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+
+.product_item {
+  width: 260px;
+  height: fit-content;
+  float: left;
+  background: #424242;
+  color: #fff;
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+#center {
+  margin: 1em;
+  overflow: hidden;
+}
+
+.product_item {
+  width: 16em;
+  height: 38em;
+  float: left;
+  background: #472f2f;
+  color: rgb(251, 243, 243);
+  margin: 10px 10px 10px 10px;
+  padding: 10px;
+
+}
+
+.product_item a {
+  display: block;
+  color: #0f0202;
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid rgb(243, 238, 238);
+  padding: 10px 0;
+  margin: 0 0 10px 0;
+  background: rgb(243, 238, 238);
+}
+
+.product_item a:hover {
+  background: transparent;
+  color: #fff;
+}
+
+.product_item h2 {
+  height: 27.2px;
+}
+
+/* form */
+body {
+  background: #ffe8ce;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+
+.ufive-feedback-hide {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.ufive-feedback {
+  font-size: 62.5%;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+
+.feedback-close {
+  margin-left: 1050;
+  top: 10px;
+  font-size: larger;
+
+  text-decoration: none;
+  color: #313131;
+}
+
+.feedback-area {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ufive-feedback:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ufive-feedback section {
+  background: #eee;
+  margin: 60px auto 120px;
+  border-top: 15px solid #393939;
+  text-align: center;
+  padding: 50px 0 110px;
+  width: 80%;
+  max-width: 1100px;
+}
+
+.ufive-feedback section h1 {
+  margin-bottom: 40px;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  color: #393939;
+}
+
+.ufive-feedback form {
+  width: 58.3333333333%;
+  margin: 0 auto;
+  color: #f3be81;
+}
+
+.ufive-feedback form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  color: #f3be81;
+}
+
+.ufive-feedback form .field label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #393939;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-feedback form .field label+span {
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #cd6302;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-feedback form .field input[type="text"],
+form .field textarea {
+  border: none;
+  background: #393939;
+  width: 80.5%;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #fff;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ufive-feedback form .field input[type="text"]#msg,
+form .field textarea#msg {
+  height: 12px;
+  resize: none;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-feedback form .field input[type="text"]:focus,
+form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+  color: #f3be81;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-feedback form .field input[type="text"]:focus#msg,
+form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-feedback form .field input[type="text"]:focus+label,
+form .field input[type="text"].focused+label,
+form .field textarea:focus+label,
+form .field textarea.focused+label {
+  width: 18%;
+  background: #393939;
+  color: #fff;
+}
+
+.ufive-feedback form .field input[type="text"].focused+label,
+form .field textarea.focused+label {
+  color: #fff;
+}
+
+.ufive-feedback form .field:hover label {
+  width: 18%;
+  background: #f3be81;
+  color: #393939;
+}
+
+.ufive-feedback form input[type="submit"] {
+  background: #f3be81;
+  color: #393939;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-feedback form input[type="submit"]:hover {
+  background: #393939;
+  color: #f3be81;
+}
+
+.ufive-feedback form input[type="submit"]:focus {
+  outline: none;
+  background: #f3be81;
+  color: #393939;
+}
+
+@media (max-width: 765px) {
+  .ufive-feedback form {
+    width: 100%;
+  }
+
+  .ufive-feedback section {
+    width: 100%;
+  }
+}
+
+/* adminform */
+
+.ufive-admin {
+  font-size: 62.5%;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+
+.ufive-admin section {
+  background: #eee;
+  margin: 60px auto 120px;
+  border-top: 15px solid #393939;
+  text-align: center;
+}
+
+.ufive-admin section h1 {
+  margin-bottom: 40px;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  color: #393939;
+}
+
+.ufive-admin form {
+  width: 58.3333333333%;
+  margin: 0 auto;
+  color: #f3be81;
+}
+
+.ufive-admin form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  color: #f3be81;
+}
+
+.ufive-admin form .field label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #393939;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-admin form .field label+span {
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #cd6302;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-admin form .field input[type="text"],
+form .field textarea {
+  border: none;
+  background: #393939;
+  width: 80.5%;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #fff;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ufive-admin form .field input[type="number"]#price,
+.ufive-admin form .field input[type="file"]#img,
+form .field textarea#msg {
+  height: 12px;
+  margin-bottom: 40px;
+  resize: none;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+
+
+.ufive-admin form .field input[type="text"]:focus,
+form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+  color: #f3be81;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-admin form .field input[type="text"]:focus#msg,
+form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-admin form .field input[type="text"]:focus+label,
+form .field input[type="text"].focused+label,
+form .field textarea:focus+label,
+form .field textarea.focused+label {
+  width: 18%;
+  background: #393939;
+  color: #fff;
+}
+
+.ufive-admin form .field input[type="text"].focused+label,
+form .field textarea.focused+label {
+  color: #fff;
+}
+
+.ufive-admin form .field:hover label {
+  width: 18%;
+  background: #f3be81;
+  color: #393939;
+}
+
+.ufive-admin form input[type="submit"] {
+  margin-top: 30px;
+  background: #f3be81;
+  color: #393939;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-admin form input[type="submit"]:hover {
+  background: #393939;
+  color: #f3be81;
+}
+
+.ufive-admin form input[type="submit"]:focus {
+  outline: none;
+  background: #f3be81;
+  color: #393939;
+}
+
+@media (max-width: 765px) {
+  .ufive-admin form {
+    width: 100%;
+  }
+
+  .ufive-admin section {
+    width: 100%;
+  }
+}
+
+/* loginform */
+
+.ufive-login {
+  font-size: 62.5%;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+
+.ufive-login section {
+  background: #eee;
+  margin: 60px auto 120px;
+  border-top: 15px solid #393939;
+  text-align: center;
+}
+
+.ufive-login section h1 {
+  margin-bottom: 40px;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  color: #393939;
+}
+
+.ufive-login form {
+  width: 58.3333333333%;
+  margin: 0 auto;
+  color: #f3be81;
+}
+
+.ufive-login form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  color: #f3be81;
+}
+
+.ufive-login form .field label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #393939;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-login form .field label+span {
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #cd6302;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-login form .field input[type="text"],
+form .field textarea {
+  border: none;
+  background: #393939;
+  width: 80.5%;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #fff;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ufive-login form .field input[type="email"]#email,
+.ufive-login form .field input[type="file"]#img,
+
+form .field textarea#msg {
+  height: 12px;
+  margin-bottom: 40px;
+  resize: none;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+
+
+.ufive-login form .field input[type="text"]:focus,
+form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+  color: #f3be81;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-login form .field input[type="text"]:focus#msg,
+form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-login form .field input[type="text"]:focus+label,
+form .field input[type="text"].focused+label,
+form .field textarea:focus+label,
+form .field textarea.focused+label {
+  width: 18%;
+  background: #393939;
+  color: #fff;
+}
+
+.ufive-login form .field input[type="text"].focused+label,
+form .field textarea.focused+label {
+  color: #fff;
+}
+
+.ufive-login form .field:hover label {
+  width: 18%;
+  background: #f3be81;
+  color: #393939;
+}
+
+.ufive-login form input[type="submit"],
+.ufive-login form input[type="button"] {
+  margin-top: 30px;
+  background: #f3be81;
+  color: #393939;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-login form input[type="submit"]:hover,
+.ufive-login form input[type="button"]:hover {
+  background: #393939;
+  color: #f3be81;
+}
+
+.ufive-login form input[type="submit"]:focus,
+.ufive-login form input[type="button"] {
+  outline: none;
+  background: #f3be81;
+  color: #393939;
+}
+
+@media (max-width: 765px) {
+  .ufive-login form {
+    width: 100%;
+  }
+
+  .ufive-login section {
+    width: 100%;
+  }
+}
+
+/* signupform */
+
+.ufive-login {
+  font-size: 62.5%;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+  visibility: visible;
+}
+
+.ufive-login section {
+  background: #eee;
+  margin: 60px auto 120px;
+  border-top: 15px solid #393939;
+  text-align: center;
+}
+
+.ufive-login section h1 {
+  margin-bottom: 40px;
+  font-size: 4em;
+  text-transform: uppercase;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 400;
+  color: #393939;
+}
+
+.ufive-login form {
+  width: 58.3333333333%;
+  margin: 0 auto;
+  color: #f3be81;
+}
+
+.ufive-login form .field {
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  color: #f3be81;
+}
+
+.ufive-login form .field label {
+  text-transform: uppercase;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #393939;
+  width: 100%;
+  padding: 18px 0;
+  font-size: 1.45em;
+  letter-spacing: 0.075em;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-login form .field label+span {
+  opacity: 0;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 7%;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 0 #cd6302;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-login form .field input[type="text"],
+form .field textarea {
+  border: none;
+  background: #393939;
+  width: 80.5%;
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 18px 0;
+  padding-left: 19.5%;
+  color: #fff;
+  font-size: 1.4em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.ufive-login form .field input[type="email"]#email,
+.ufive-login form .field input[type="file"]#img,
+
+form .field textarea#msg {
+  height: 12px;
+  margin-bottom: 40px;
+  resize: none;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+
+
+.ufive-login form .field input[type="text"]:focus,
+form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+  color: #f3be81;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-login form .field input[type="text"]:focus#msg,
+form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 150px;
+  font-size: 10px;
+  font-family: "Exo 2", sans-serif;
+}
+
+.ufive-login form .field input[type="text"]:focus+label,
+form .field input[type="text"].focused+label,
+form .field textarea:focus+label,
+form .field textarea.focused+label {
+  width: 18%;
+  background: #393939;
+  color: #fff;
+}
+
+.ufive-login form .field input[type="text"].focused+label,
+form .field textarea.focused+label {
+  color: #fff;
+}
+
+.ufive-login form .field:hover label {
+  width: 18%;
+  background: #f3be81;
+  color: #393939;
+}
+
+.ufive-login form input[type="submit"],
+.ufive-login form input[type="button"] {
+  margin-top: 30px;
+  background: #f3be81;
+  color: #393939;
+  border: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 13px 50px;
+  font-size: 1.4em;
+  letter-spacing: 0.1em;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 300;
+  cursor: pointer;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+.ufive-login form input[type="submit"]:hover,
+.ufive-login form input[type="button"]:hover {
+  background: #393939;
+  color: #f3be81;
+}
+
+.ufive-login form input[type="submit"]:focus,
+.ufive-login form input[type="button"] {
+  outline: none;
+  background: #f3be81;
+  color: #393939;
+}
+
+@media (max-width: 765px) {
+  .ufive-login form {
+    width: 100%;
+  }
+
+  .ufive-login section {
+    width: 100%;
+  }
+}
+
+/* Корзина */
+.cart-popup-hide {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.cart-popup {
+  align-items: space-between;
+  background-color: #e2dfdb;
+  font-size: 70%;
+  font-family: "Exo 2", sans-serif;
+
+  margin-left: 40em;
+  width: 50em;
+  height: 50em;
+  position: fixed;
+  margin-bottom: 40px;
+  visibility: visible;
+}
+
+.cart-popup a {
+  text-decoration: none;
+  color: rgb(210, 49, 49);
+  border: #0f0202;
+  border-radius: 3%;
+  font-weight: bold;
+}
+
+.small-cart {
+  width: 10em;
+
+
+}
+
+.small-cart img {
+  width: 5em;
+  height: 2em;
+}
+
+.small-cart a {
+  text-decoration: none;
+  color: #0f0202;
+}
+
+.cart {
+  margin-left: auto;
+  margin-right: auto;
+  width: 20em;
+  height: auto;
+  align-items: center;
+}
+
+.cart a,
+.single a {
+  text-decoration: none;
+  color: rgb(210, 49, 49);
+  border: #0f0202;
+  border-radius: 3%;
+}
+
+/* single */
+
+.single {
+  display: flex;
+  flex-direction: row;
+}
+
+.textsingle {
+  margin-left: 2em;
+}
