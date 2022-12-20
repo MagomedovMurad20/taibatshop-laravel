@@ -28,5 +28,6 @@ Route::get('/kurtki', [KurtkiPageController::class, 'index'])->name('/kurtki');
 Route::get('/platya', [PlatyaPageController::class, 'index'])->name('/platya');
 Route::get('/jempers', [JempersPageController::class, 'index'])->name('/jempers');
 Route::get('/signin', [SigninPageController::class, 'index'])->name('/signin');
-Route::get('/signup', [SignupPageController::class, 'index'])->name('/signup');
+Route::get('/signup', [SignupPageController::class, 'GetSignup'])->name('/signup');
+Route::post('/signup', [SignupPageController::class, 'PostSignup']);
 Route::get('/admin', [AdminPageController::class, 'index'])->name('/admin');

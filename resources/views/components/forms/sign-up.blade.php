@@ -1,3 +1,4 @@
-<div>
-    <!-- Walk as if you are kissing the Earth with your feet. - Thich Nhat Hanh -->
-</div>
+<form method="POST">
+    @csrf
+<input type="submit"></div>
+</form>
