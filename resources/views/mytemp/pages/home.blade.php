@@ -4,8 +4,7 @@
 @foreach ($data as $product)
 <div id="center">
         <div class="product_item">
-       <img  style="width:265px; height:345px" {{ $product->img }}/>
-
+            @php echo '<img src="data:image/jpeg;base64,'.chunk_split(base64_encode($product->img)).'" style="width:265px; height:345px"/>' @endphp
             <h2>
              {{$product->title}}
             </h2>
