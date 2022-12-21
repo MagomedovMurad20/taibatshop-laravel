@@ -9,6 +9,7 @@ use App\Http\Controllers\JempersPageController;
 use App\Http\Controllers\SigninPageController;
 use App\Http\Controllers\SignupPageController;
 use App\Http\Controllers\AdminPageController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,3 +32,4 @@ Route::get('/signin', [SigninPageController::class, 'index'])->name('/signin');
 Route::get('/signup', [SignupPageController::class, 'GetSignup'])->name('/signup');
 Route::post('/signup', [SignupPageController::class, 'PostSignup']);
 Route::get('/admin', [AdminPageController::class, 'index'])->name('/admin');
+Route::get('/welcomeuser', [UserController::class, 'index'])->name('/welcomeuser');
