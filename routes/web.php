@@ -10,6 +10,7 @@ use App\Http\Controllers\SigninPageController;
 use App\Http\Controllers\SignupPageController;
 use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,11 +24,12 @@ use App\Http\Controllers\UserController;
 
 
 
-Route::get('/', [HomeController::class, 'Index'])->name('/');
-Route::get('/costums', [CostumsPageController::class, 'index'])->name('/costums');
-Route::get('/kurtki', [KurtkiPageController::class, 'index'])->name('/kurtki');
-Route::get('/platya', [PlatyaPageController::class, 'index'])->name('/platya');
-Route::get('/jempers', [JempersPageController::class, 'index'])->name('/jempers');
+Route::get('/', [ProductController::class, 'Index'])->name('/');
+Route::get('/costums', [ProductController::class, 'costums'])->name('/costums');
+Route::get('/kurtki', [ProductController::class, 'kurtki'])->name('/kurtki');
+Route::get('/platya', [ProductController::class, 'platya'])->name('/platya');
+Route::get('/jempers', [ProductController::class, 'jempers'])->name('/jempers');
+Route::get('/kardigans', [ProductController::class, 'kardigans'])->name('/kardigans');
 Route::get('/signin', [SigninPageController::class, 'index'])->name('/signin');
 Route::get('/signup', [SignupPageController::class, 'GetSignup'])->name('/signup');
 Route::post('/signup', [SignupPageController::class, 'PostSignup']);
