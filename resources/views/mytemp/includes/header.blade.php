@@ -14,7 +14,7 @@
               <li><a href="{{route('/admin')}}?page=login" >Админка</a></li>
       @endif
       <li>
-        select product category
+        @include('components.forms.select-product')
       </li>
       <li>
         <a href="#ufive-feedback" onclick="feedBackOpen();">Связаться с нами</a>
