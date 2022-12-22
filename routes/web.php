@@ -30,4 +30,5 @@ Route::get('/signin', [SigninPageController::class, 'index'])->name('/signin');
 Route::get('/signup', [SignupPageController::class, 'GetSignup'])->name('/signup');
 Route::post('/signup', [SignupPageController::class, 'PostSignup']);
 Route::get('/admin', [AdminPageController::class, 'index'])->name('/admin');
+Route::post('/admin', [AdminPageController::class, 'store'])->name('/admin');
 Route::get('/welcomeuser', [UserController::class, 'index'])->name('/welcomeuser');
