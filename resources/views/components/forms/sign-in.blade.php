@@ -1,5 +1,6 @@
 <div class="ufive-login">
 	<form method="POST" id="loginform">
+		@csrf
 		<section id="feedback">
 			<div class="field">
 				<label for="title">Нажмите, чтобы ввести логин</label>

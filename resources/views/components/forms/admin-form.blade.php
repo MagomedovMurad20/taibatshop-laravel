@@ -1,6 +1,7 @@
 
 <div class="ufive-admin">
            <form method="post" enctype="multipart/form-data" id="adminform">
+            @csrf
                <section id="feedback">
 
                    <br />
