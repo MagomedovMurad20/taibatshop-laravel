@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class SignupPageController extends Controller
@@ -10,7 +11,13 @@ class SignupPageController extends Controller
     {
         return view('mytemp.pages.signup');
     }
-    public function PostSignup(Request $request)
+    public function store(Request $request)
     {
+        $user = new User;
+        $user->email = $request->email;
+        $user->name = $request->name;
+        $user->password = $request->password;
+        $user->save();
+        return redirect('/signup')->with('status', 'Юзер добавлен');
     }
 }

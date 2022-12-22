@@ -29,6 +29,7 @@ Route::get('/kardigans', [ProductController::class, 'kardigans'])->name('/kardig
 Route::get('/signin', [SigninPageController::class, 'index'])->name('/signin');
 Route::get('/signup', [SignupPageController::class, 'GetSignup'])->name('/signup');
 Route::post('/signup', [SignupPageController::class, 'PostSignup']);
+Route::post('/signup', [SignupPageController::class, 'store']);
 Route::get('/admin', [AdminPageController::class, 'index'])->name('/admin');
 Route::post('/admin', [AdminPageController::class, 'store'])->name('/admin');
 Route::get('/welcomeuser', [UserController::class, 'index'])->name('/welcomeuser');

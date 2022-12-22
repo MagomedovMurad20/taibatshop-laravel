@@ -30,10 +30,14 @@
                        <input type="file" name="img" id="img" accept=".jpg, .jpeg, .png" required />
                    </div>
                    </p>
-
+    
                    <div class="field">
                        <label for="category_id">Категория</label>
                        <select name="category_id">
+                        @foreach ($categories as $categorie)
+                            <option value="{{ $categorie->id }}">{{ $categorie->title }}</option>
+                        @endforeach
+
                        </select>
                    </div>
                    <label for="name"></label>

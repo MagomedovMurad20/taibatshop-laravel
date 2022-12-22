@@ -4,13 +4,19 @@
         @csrf
         <section id="feedback">
             <div class="field">
-                <label for="title">Нажмите, чтобы ввести логин</label>
+                <label for="title">Нажмите, чтобы ввести почту</label>
                 <p>Ваш e-mail будет использоваться в качестве логина <br />
                     <input type="email" name="email" id="email" pattern="\S+@[a-z]+.[a-z]+" min="3" max="50" autofocus required placeholder="mail@mail.ru" />
                 </p>
             </div>
             <div class="field">
-                <label for="title">Нажмите, чтобы ввести логин</label>
+                <label for="title">Нажмите, чтобы ввести имя</label>
+                <p>Ваш e-mail будет использоваться в качестве логина <br />
+                    <input type="text" name="name" id="name" min="3" max="50" autofocus required placeholder="mail@mail.ru" />
+                </p>
+            </div>
+            <div class="field">
+                <label for="title">Нажмите, чтобы ввести пароль</label>
                 <p>Пароль <br />
                     <input type="password" name="password" id="password" required pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,}" min="5" max="100" placeholder="Цифры, буквы и символы" />
                 </p>
