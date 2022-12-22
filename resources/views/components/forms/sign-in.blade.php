@@ -14,7 +14,7 @@
 				</p>
 			</div>
 			<input type="submit" id="button" value="Войти">
-			<a href="registration.php">
+			<a href="{{route('/signup')}}">
 				<input type="button" id="butt" value="Зарегистрироваться">
 			</a>
 		</section>
