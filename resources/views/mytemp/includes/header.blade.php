@@ -4,10 +4,12 @@
   <nav class="top-menu" id="navbar">
     <ul class="menu-main">
       <li><a href="{{route('/')}}" >Главная</a></li>
-      <li><a href="{{route('/kurtki')}}?category_id=2&page=kurtki" >Куртки</a></li>
-      <li><a href="{{route('/platya')}}?category_id=1&page=platya" >Платья</a></li>
-      <li><a href="{{route('/costums')}}?category_id=3&page=trikotaj" >Трикотаж</a></li>
-      <li><a href="{{route('/signin')}}?page=login" >Войти</a></li>
+      <li><a href="{{route('/platya')}}" >Платья</a></li>
+      <li><a href="{{route('/kurtki')}}" >Куртки</a></li>
+      <li><a href="{{route('/jempers')}}" >Джемперы</a></li>
+      <li><a href="{{route('/costums')}}" >Костюмы</a></li>
+      <li><a href="{{route('/kardigans')}}" >Кардиганы</a></li>
+      <li><a href="{{route('/signin')}}" >Войти</a></li>
       @if (Auth::check())
               <li><a href="{{route('/admin')}}?page=login" >Админка</a></li>
       @endif

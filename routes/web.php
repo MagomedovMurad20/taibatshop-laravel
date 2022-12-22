@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\CostumsPageController;
-use App\Http\Controllers\KurtkiPageController;
-use App\Http\Controllers\PlatyaPageController;
-use App\Http\Controllers\JempersPageController;
+
 use App\Http\Controllers\SigninPageController;
 use App\Http\Controllers\SignupPageController;
 use App\Http\Controllers\AdminPageController;
