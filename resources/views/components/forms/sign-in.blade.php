@@ -14,10 +14,14 @@
 					<input type="password" name="password" id="password" required pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])\S{6,}" min="3" max="50" placeholder="Цифры, буквы и символы">
 				</p>
 			</div>
+
 			<input type="submit" id="button" value="Войти">
 			<a href="{{route('/signup')}}">
 				<input type="button" id="butt" value="Зарегистрироваться">
 			</a>
+			<div class="checkbox">
+				Запомнить меня
+			</div>
 		</section>
 	</form>
 </div>

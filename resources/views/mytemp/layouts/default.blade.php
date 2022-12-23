@@ -11,6 +11,7 @@
 <body>
 @include('mytemp.includes.header')
 <div class="container">
+    @include('components.alerts.alert')
     @yield('content')
 
 </div>
