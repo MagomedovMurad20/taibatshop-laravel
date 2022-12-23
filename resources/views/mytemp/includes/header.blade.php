@@ -9,6 +9,7 @@
       <li><a href="{{route('/jempers')}}" >Джемперы</a></li>
       <li><a href="{{route('/costums')}}" >Костюмы</a></li>
       <li><a href="{{route('/kardigans')}}" >Кардиганы</a></li>
+      <li><a href="" >{{Auth::user()->getname()}}</a></li>
       @if (!Auth::check())
               <li><a href="{{route('/signin')}}" >Войти</a></li>
       @endif
