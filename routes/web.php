@@ -20,7 +20,7 @@ use App\Http\Controllers\ProductController;
 */
 
 
-//products
+//products ProductController получаем и выводим все продукты
 Route::get('/', [ProductController::class, 'Index'])->name('/');
 Route::get('/costums', [ProductController::class, 'costums'])->name('/costums');
 Route::get('/kurtki', [ProductController::class, 'kurtki'])->name('/kurtki');
@@ -30,6 +30,7 @@ Route::get('/kardigans', [ProductController::class, 'kardigans'])->name('/kardig
 //auth
 Route::get('/signin', [AuthController::class, 'GetSignIn'])->name('/signin');
 Route::post('/signin', [AuthController::class, 'PostSignIn'])->name('/signin');
+Route::get('/signout', [AuthController::class, 'GetSignOut'])->name('/signout');
 
 Route::get('/signup', [AuthController::class, 'GetSignUp'])->name('/signup');
 Route::post('/signup', [AuthController::class, 'PostSignUp']);

@@ -34,4 +34,9 @@ class AuthController extends Controller
         //    return var_dump($cho);
         return redirect()->route('/admin')->with('info', 'Добро пожаловать');
     }
+    public function GetSignOut()
+    {
+        Auth::logout();
+        return redirect('/')->with('info', 'Вы вшли из аккаунта');
+    }
 }
