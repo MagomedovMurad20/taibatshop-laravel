@@ -27,15 +27,17 @@ Route::get('/kurtki', [ProductController::class, 'kurtki'])->name('/kurtki');
 Route::get('/platya', [ProductController::class, 'platya'])->name('/platya');
 Route::get('/jempers', [ProductController::class, 'jempers'])->name('/jempers');
 Route::get('/kardigans', [ProductController::class, 'kardigans'])->name('/kardigans');
+
+
 //auth
 Route::get('/signin', [AuthController::class, 'GetSignIn'])->name('/signin');
-Route::post('/signin', [AuthController::class, 'PostSignIn'])->name('/signin');
+Route::post('/signin', [AuthController::class, 'PostSignIn'])->name('/post.signin');
 Route::get('/signout', [AuthController::class, 'GetSignOut'])->name('/signout');
 
 Route::get('/signup', [AuthController::class, 'GetSignUp'])->name('/signup');
-Route::post('/signup', [AuthController::class, 'PostSignUp']);
+Route::post('/signup', [AuthController::class, 'PostSignUp'])->name('/post.signup');
 //adminka
 Route::get('/admin', [AdminPageController::class, 'index'])->name('/admin');
-Route::post('/admin', [AdminPageController::class, 'store'])->name('/admin');
+Route::post('/admin', [AdminPageController::class, 'store'])->name('/post.admin');
 
 Route::get('/welcomeuser', [UserController::class, 'index'])->name('/welcomeuser');

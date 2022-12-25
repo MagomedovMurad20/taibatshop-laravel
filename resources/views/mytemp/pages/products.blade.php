@@ -1,7 +1,7 @@
 @extends('mytemp.layouts.default')
 @section('content')
 <div class="container  ">
-    
+
 @foreach ($data as $product)
 <div id="center">
         <div class="product_item">

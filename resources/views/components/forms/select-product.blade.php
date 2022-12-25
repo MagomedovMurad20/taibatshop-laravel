@@ -1,8 +1,8 @@
 <div>
-<form action="" method="post">
+<form action="" method="get">
     <select name='select' class="select_category">
-        <option value='a_z'>по алфавиту</option>
-        <!-- <option value='z_a'>Б-А</option> -->
+        <option value='abc'>по abc </option>
+        <option value='cba'>по cba </option>
         <option value='priceMax'>сначала дорогие</option>
         <option value='priceMin'>сначала дешевые</option>
     </select>

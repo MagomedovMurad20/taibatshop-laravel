@@ -9,28 +9,142 @@ use App\Models\Product;
 class ProductController extends Controller
 {
 
-    public function Index()
+
+    public function Index(Request $request)
     {
-        return view('mytemp.pages.products', ['data' => Product::all()]);
+
+        $products = Product::all();
+        if ($request->has('select')) {
+            switch ($request->get('select')) {
+                case 'a_z':
+                    $products = Product::orderBy('title', 'asc');
+                    break;
+                case 'priceMax':
+                    $products = Product::orderBy('price', 'desc');
+                    break;
+                case 'priceMin':
+                    $products = Product::orderBy('price', 'asc');
+                    break;
+                default:
+                    $products = Product::all();
+                    break;
+            }
+        }
+        $products = $products->get();
+
+        return view('mytemp.pages.products', ['data' => $products]);
     }
-    public function Platya()
+    public function Platya(Request $request)
     {
-        return view('mytemp.pages.products', ['data' => Product::all()->where('category_id', '=', '1')]);
+        $products = Product::where('category_id', '=', '1');
+        if ($request->has('select')) {
+            switch ($request->get('select')) {
+                case 'a_z':
+                    $products = $products->orderBy('title', 'asc');
+                    break;
+                case 'priceMax':
+                    $products = $products->orderBy('price', 'desc');
+                    break;
+                case 'priceMin':
+                    $products = $products->orderBy('price', 'asc');
+                    break;
+            }
+        }
+        $products = $products->get();
+        return view('mytemp.pages.products', ['data' => $products]);
     }
-    public function Kurtki()
+    public function Kurtki(Request $request)
     {
-        return view('mytemp.pages.products', ['data' => Product::all()->where('category_id', '=', '2')]);
+        $products = Product::all()->where('category_id', '=', '2');
+        if ($request->has('select')) {
+            switch ($request->get('select')) {
+                case 'a_z':
+                    $products = Product::orderBy('title', 'asc');
+                    break;
+                case 'priceMax':
+                    $products = Product::orderBy('price', 'desc');
+                    break;
+                case 'priceMin':
+                    $products = Product::orderBy('price', 'asc');
+                    break;
+            }
+            $products = $products->get();
+        }
+        return view('mytemp.pages.products', ['data' => $products]);
     }
-    public function Jempers()
+    public function Jempers(Request $request)
     {
-        return view('mytemp.pages.products', ['data' => Product::all()->where('category_id', '=', '3')]);
+        $products = Product::all()->where('category_id', '=', '3');
+        if ($request->has('select')) {
+            switch ($request->get('select')) {
+                case 'a_z':
+                    $products = Product::orderBy('title', 'asc');
+                    break;
+                case 'priceMax':
+                    $products = Product::orderBy('price', 'desc');
+                    break;
+                case 'priceMin':
+                    $products = Product::orderBy('price', 'asc');
+                    break;
+            }
+            $products = $products->get();
+        }
+        return view('mytemp.pages.products', ['data' => $products]);
     }
-    public function Costums()
+    public function Costums(Request $request)
     {
-        return view('mytemp.pages.products', ['data' => Product::all()->where('category_id', '=', '4')]);
+        $products = Product::all()->where('category_id', '=', '4');
+        if ($request->has('select')) {
+            switch ($request->get('select')) {
+                case 'a_z':
+                    $products = Product::orderBy('title', 'asc');
+                    break;
+                case 'priceMax':
+                    $products = Product::orderBy('price', 'desc');
+                    break;
+                case 'priceMin':
+                    $products = Product::orderBy('price', 'asc');
+                    break;
+            }
+            $products = $products->get();
+        }
+        return view('mytemp.pages.products', ['data' => $products]);
     }
-    public function Kardigans()
+    public function Kardigans(Request $request)
     {
-        return view('mytemp.pages.products', ['data' => Product::all()->where('category_id', '=', '5')]);
+        $products = Product::all()->where('category_id', '=', '5');
+        if ($request->has('select')) {
+            switch ($request->get('select')) {
+                case 'a_z':
+                    $products = Product::orderBy('title', 'asc');
+                    break;
+                case 'priceMax':
+                    $products = Product::orderBy('price', 'desc');
+                    break;
+                case 'priceMin':
+                    $products = Product::orderBy('price', 'asc');
+                    break;
+            }
+            $products = $products->get();
+        }
+        return view('mytemp.pages.products', ['data' => $products]);
+    }
+    public function SortByAbc(Request $request)
+    {
+        if ($request->has('a_z')) {
+            return view('mytemp.pages.products', ['data' => Product::orderBy('name', 'Asc')]);;
+        }
+    }
+    public function SortByAbcDesc(Request $request)
+    {
+        Product::sortBy('name')->desc();
+    }
+    public function SortByPrice(Request $request)
+    {
+        Product::sortBy('price');
+    }
+    public function SortByPriceDesc(Request $request)
+    {
+        Product::sortBy('price')->desc();
     }
 }
