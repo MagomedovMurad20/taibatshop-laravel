@@ -18,9 +18,28 @@ class AdminPageController extends Controller
         $product->title = $request->title;
         $product->description = $request->description;
         $product->price = $request->price;
-        $product->img = $request->img; //todo сделать кодировку bynari
+        //$product->img = $request->img;
+
+        //Если записываешь без енкод64(), то во вьюшке надо енкодить
+        // $path = $request->file('img')->getRealPath();
+        // $img = file_get_contents($path);
+        // $product->img = $img;
+
+        //Это если сразу записываешь енкод, тогда во вьюшке просто выводишь $product->img;
+        $path = $request->file('img')->getRealPath();
+        $img = file_get_contents($path);
+        $base64 = base64_encode($img);
+        $product->img = $base64;
+
         $product->category_id = $request->category_id;
         $product->save();
-        return redirect('/admin')->with('status', 'Товар добавлен');
+
+        return redirect('/admin')->with('info', 'Товар добавлен');
     }
 }
+
+//Это если сразу записываешь енкод, тогда во вьюшке просто выводишь $product->img;
+// $path = $request->file('img')->getRealPath();
+// $img = file_get_contents($path);
+// $base64 = base64_encode($img);
+// $product->img = $base64;
