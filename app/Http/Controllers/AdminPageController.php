@@ -8,6 +8,10 @@ use App\Models\Category;
 
 class AdminPageController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function Index()
     {
         return view('mytemp.pages.admin', ['categories' => Category::all()]);

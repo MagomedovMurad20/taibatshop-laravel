@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\SigninPageController;
-use App\Http\Controllers\SignupPageController;
 use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
+use GuzzleHttp\Middleware;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
