@@ -16,7 +16,7 @@
 			</div>
 
 			<input type="submit" id="button" value="Войти">
-			<a href="{{route('/signup')}}">
+			<a href="{{route('signup')}}">
 				<input type="button" id="butt" value="Зарегистрироваться">
 			</a>
 			<div class="checkbox">

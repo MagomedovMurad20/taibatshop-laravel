@@ -1,6 +1,7 @@
 @extends('mytemp.layouts.default')
 @section('content')
 <div class="container  ">
+        
 
 @foreach ($data as $product)
 <div id="center">
@@ -14,7 +15,7 @@
             @if (str_starts_with($product->img,'/9j' )) 
             
        
-                            <img src="data:image/jpg;base64,{{$product->img}}" height="345" width="265"> 
+                            <img src="data:image/jpg;base64,{{ $product->img }}" height="345" width="265"> 
   
             @else
                     <img src="data:image/jpg;base64,{{ chunk_split(base64_encode($product->img)) }}" height="345" width="265">  
