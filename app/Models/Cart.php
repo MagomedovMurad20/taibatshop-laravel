@@ -9,8 +9,8 @@ class Cart extends Model
 {
     use HasFactory;
 
-    public function carts()
+    public function products()
     {
-        return $this->belongsToMany(Cart::class)->withPivot('quantity');
+        return $this->belongsToMany(Product::class)->withPivot('quantity');
     }
 }

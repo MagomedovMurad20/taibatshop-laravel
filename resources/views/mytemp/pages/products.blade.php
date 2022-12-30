@@ -38,8 +38,12 @@
                 Подробнее
             </a>
 
-            <a href="/корз">
-                В корзину
+            <a href="#">
+                           <form action="{{ route('cart.add', ['id' => $product->id]) }}"
+                  method="post" class="d-inline">
+                @csrf
+                <button type="submit" class="btn btn-success">В корзину</button>
+            </form>
             </a>
         </div>
 </div>

@@ -11,8 +11,8 @@ class Product extends Model
     const UPDATED_AT = null;
     const CREATED_AT = null;
 
-    public function products()
+    public function carts()
     {
-        return $this->belongsToMany(Product::class)->withPivot('quantity');
+        return $this->belongsToMany(Basket::class)->withPivot('quantity');
     }
 }

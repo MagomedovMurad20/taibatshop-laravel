@@ -42,7 +42,7 @@ Route::get('/admin', [AdminPageController::class, 'index'])->name('admin');
 Route::post('/admin', [AdminPageController::class, 'store'])->name('post.admin');
 
 //корзина
-Route::post('/cart/add/{id}', [CartController::class, 'add'])->where('id', '[0-9]+')->name('basket.add');
+Route::post('/cart/add/{id}', [CartController::class, 'add'])->where('id', '[0-9]+')->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/order', [CartController::class, 'order'])->name('cart.order');
 

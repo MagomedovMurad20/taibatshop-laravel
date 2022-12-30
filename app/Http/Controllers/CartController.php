@@ -30,6 +30,8 @@ class CartController extends Controller
      */
     public function add(Request $request, $id)
     {
+        $cart = Cart::create();
+        var_dump(get_object_vars($cart));
         $cart_id = $request->cookie('cart_id');
         $quantity = $request->input('quantity') ?? 1;
         if (empty($cart_id)) {
