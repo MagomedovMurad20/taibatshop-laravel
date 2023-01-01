@@ -13,7 +13,7 @@
         @include('components.forms.select-product')
       </li>
       <li>
-        <a href="#ufive-feedback" onclick="feedBackOpen();">Связаться с нами</a>
+        <a href="{{route('feedbackform')}}" onclick="feedBackOpen();">Связаться с нами</a>
       </li>
       <li>
         <a href="#" onclick="cartOpen();">
