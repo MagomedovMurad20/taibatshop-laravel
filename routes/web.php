@@ -47,5 +47,7 @@ Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/order', [CartController::class, 'order'])->name('cart.order');
 
 Route::get('/welcomeuser', [UserController::class, 'index'])->name('welcomeuser');
+Route::resource('feedback', FeedbackController::class);
+
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

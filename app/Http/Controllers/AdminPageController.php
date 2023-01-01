@@ -24,12 +24,6 @@ class AdminPageController extends Controller
         $product->price = $request->price;
         //$product->img = $request->img;
 
-        //Если записываешь без енкод64(), то во вьюшке надо енкодить
-        // $path = $request->file('img')->getRealPath();
-        // $img = file_get_contents($path);
-        // $product->img = $img;
-
-        //Это если сразу записываешь енкод, тогда во вьюшке просто выводишь $product->img;
         $path = $request->file('img')->getRealPath();
         $img = file_get_contents($path);
         $base64 = base64_encode($img);
@@ -47,3 +41,11 @@ class AdminPageController extends Controller
 // $img = file_get_contents($path);
 // $base64 = base64_encode($img);
 // $product->img = $base64;
+
+
+        //Если записываешь без енкод64(), то во вьюшке надо енкодить
+        // $path = $request->file('img')->getRealPath();
+        // $img = file_get_contents($path);
+        // $product->img = $img;
+
+        //Это если сразу записываешь енкод, тогда во вьюшке просто выводишь $product->img;

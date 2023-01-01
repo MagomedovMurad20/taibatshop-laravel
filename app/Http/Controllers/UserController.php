@@ -9,6 +9,6 @@ class UserController extends Controller
 {
     public function Index()
     {
-        return view('mytemp.pages.welcomeuser', ['data' => User::all()]);
+        return view('mytemp.pages.welcomeuser');
     }
 }
