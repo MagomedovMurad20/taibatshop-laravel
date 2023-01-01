@@ -1,27 +1,9 @@
-@php
- if ($_POST['name'] !== '' && $_POST['phone'] && $_POST['message']) {
-    $to = 'kurbtai@gmail.com';
-    $name = $_POST['name'];
-    $phone = $_POST['phone'];
-    $message = $_POST['message'];
-    // echo $to;
-    echo "<br>";
-    echo $name;
-    echo "<br>";
-    echo $phone;
-    echo $message;
-    $mail = mail($to, $name, $phone, $message);
-    echo "$to";
 
-    var_dump($mail);
-}   
-@endphp
 
-<div class="ufive-feedback-hide" id="ufive-feedback">
+<div class="ufive-feedback" id="ufive-feedback">
     <section id="feedback">
-        <a href="#navbar" id="feedback-close" class="feedback-close" onclick="feedBackClose();">ЗАКРЫТЬ</a>
-        <h1>Форма заказа</h1>
-        <form method=" POST">
+        <form method="POST">
+        @csrf
 
             <div class="field name-box">
                 <input type="text" name="name" id="name" placeholder="Татьяна" maxlength="35" />

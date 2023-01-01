@@ -7,6 +7,7 @@ use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdminPageController;
+use App\Http\Controllers\FeedbackNewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,13 +42,17 @@ Route::post('/signup', [AuthController::class, 'PostSignUp'])->name('post.signup
 Route::get('/admin', [AdminPageController::class, 'index'])->name('admin');
 Route::post('/admin', [AdminPageController::class, 'store'])->name('post.admin');
 
+//Форма обратной связи
+Route::get('/feedbacks', [FeedbackNewController::class, 'index'])->name('feedbacks');
+Route::get('/feedbackform', [FeedbackNewController::class, 'feedbackform'])->name('feedbackform');
+Route::post('/feedbackform', [FeedbackNewController::class, 'store'])->name('post.feedbackform');
+
 //корзина
 Route::post('/cart/add/{id}', [CartController::class, 'add'])->where('id', '[0-9]+')->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/order', [CartController::class, 'order'])->name('cart.order');
 
 Route::get('/welcomeuser', [UserController::class, 'index'])->name('welcomeuser');
-Route::resource('feedback', FeedbackController::class);
 
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

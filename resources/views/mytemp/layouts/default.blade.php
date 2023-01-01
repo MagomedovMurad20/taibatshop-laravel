@@ -5,7 +5,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <link rel="stylesheet" href="main.css">
-<script src="script.js" ></script>
+  <script src="script.js" ></script>
   <title>taiba-shop</title>
 </head>
 <body>
