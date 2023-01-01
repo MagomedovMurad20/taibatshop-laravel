@@ -9,16 +9,7 @@
       <li><a href="{{route('jempers')}}" >Джемперы</a></li>
       <li><a href="{{route('costums')}}" >Костюмы</a></li>
       <li><a href="{{route('kardigans')}}" >Кардиганы</a></li>
-      @if (!Auth::check())
-              <li><a href="{{route('signin')}}" >Войти</a></li>
-      @endif
-      @if (Auth::check())
-            <li><a href="" >Привет, {{Auth::user()->getname()}}</a></li>
-              <li><a href="{{route('admin')}}?page=login" >Админка</a></li>
-              <li><a href="{{route('signout')}}" >Выйти</a></li>
-
-      @endif
-      <li>
+       <li>
         @include('components.forms.select-product')
       </li>
       <li>
@@ -31,7 +22,18 @@
         </a>
       </li>
 cart popup
-    </ul>
+
+      @if (!Auth::check())
+              <li><a href="{{route('signin')}}" >Войти</a></li>
+      @endif
+      @if (Auth::check())
+      <br/>
+            <p>Привет, {{Auth::user()->getname()}}</p>
+              <li><a href="{{route('admin')}}?page=login" >Админка</a></li>
+              <li><a href="{{route('signout')}}" >Выйти</a></li>
+
+      @endif
+         </ul>
 
   </nav>
 

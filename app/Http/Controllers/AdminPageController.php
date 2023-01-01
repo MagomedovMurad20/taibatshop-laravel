@@ -32,7 +32,7 @@ class AdminPageController extends Controller
         $product->category_id = $request->category_id;
         $product->save();
 
-        return redirect('/admin')->with('info', 'Товар добавлен');
+        return redirect('admin')->with('info', 'Товар добавлен');
     }
 }
 

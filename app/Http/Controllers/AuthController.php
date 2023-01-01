@@ -32,7 +32,7 @@ class AuthController extends Controller
         }
         //     $cho = Auth::attempt($request->only(['email', 'password']));
         //    return var_dump($cho);
-        return redirect()->route('/admin')->with('info', 'Добро пожаловать');
+        return redirect()->route('admin')->with('info', 'Добро пожаловать');
     }
     public function GetSignOut()
     {
