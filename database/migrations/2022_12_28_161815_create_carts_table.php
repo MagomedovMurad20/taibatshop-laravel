@@ -13,7 +13,7 @@ class CreateCartsTable extends Migration
      */
     public function up()
     {
-        if (!Schema::hasTable('products')) {
+        if (!Schema::hasTable('carts')) {
             Schema::create('carts', function (Blueprint $table) {
                 $table->id();
                 $table->timestamps();
