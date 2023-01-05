@@ -1,8 +1,7 @@
 @extends('mytemp.layouts.default')
 @section('content')
 <div class="container  ">
-        
-
+    
 @foreach ($data as $product)
 <div id="center">
         <div class="product_item">
@@ -38,12 +37,15 @@
                 Подробнее
             </a>
 
+             {{-- <a href="{{ route('cartnew', ['id' => $product->id]) }}">
+                В корзину
+            </a> --}}
             <a href="#">
-                           <form action="{{ route('cart.add', ['id' => $product->id]) }}"
+                <form action="{{ route('cart.add', ['id' => $product->id]) }}"
                   method="post" class="d-inline">
                 @csrf
                 <button type="submit" class="btn btn-success">В корзину</button>
-            </form>
+                </form>
             </a>
         </div>
 </div>

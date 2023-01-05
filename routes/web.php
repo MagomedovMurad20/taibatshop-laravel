@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CartControllerNew;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\AdminPageController;
 use App\Http\Controllers\FeedbackNewController;
@@ -51,6 +52,8 @@ Route::post('/feedbackform', [FeedbackNewController::class, 'store'])->name('pos
 Route::post('/cart/add/{id}', [CartController::class, 'add'])->where('id', '[0-9]+')->name('cart.add');
 Route::get('/cart', [CartController::class, 'index'])->name('cart');
 Route::get('/order', [CartController::class, 'order'])->name('cart.order');
+Route::get('/smallcart', [CartController::class, 'smallcart'])->name('smallcart');
+
 
 Route::get('/welcomeuser', [UserController::class, 'index'])->name('welcomeuser');
 

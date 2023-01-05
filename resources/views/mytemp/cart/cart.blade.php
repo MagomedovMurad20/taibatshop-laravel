@@ -1,4 +1,6 @@
-  <h1>Ваша корзина</h1>
+
+
+<h1>Ваша корзина</h1>
     @if (count($products))
         @php
             $basketCost = 0;
@@ -21,7 +23,8 @@
                 <tr>
                     <td>{{ $loop->iteration }}</td>
                     <td>
-                        <a href="{{ route('catalog.product', [$product->slug]) }}">{{ $product->name }}</a>
+                        {{-- {{ route('catalog.product',[$product->slug]) }} --}}
+                        <a href="">{{ $product->title }}</a>
                     </td>
                     <td>{{ number_format($itemPrice, 2, '.', '') }}</td>
                     <td>
