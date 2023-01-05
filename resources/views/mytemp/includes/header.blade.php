@@ -15,13 +15,8 @@
       <li>
         <a href="{{route('feedbackform')}}" onclick="feedBackOpen();">Связаться с нами</a>
       </li>
-      <li>
-        <a href="#" onclick="cartOpen();">
+      <li><a href="{{route('cart')}}" >Корзина</a></li>
 
-          small cart
-        </a>
-      </li>
-cart popup
 
       @if (!Auth::check())
               <li><a href="{{route('signin')}}" >Войти</a></li>

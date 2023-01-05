@@ -12,7 +12,7 @@ class CartController extends Controller
         $cart_id = $request->cookie('cart_id'); //получаем значение куки и называем 'cart_id' и записываем в переменную $cart_id;
         if (!empty($cart_id)) {
             $products = Cart::findOrFail($cart_id)->products;
-            return view('mytemp.cart.cart', compact('products'))->with('info', 'Товар добавлен в корзину');
+            return view('mytemp.pages.cart', compact('products'))->with('info', 'Товар добавлен в корзину');
         } else {
             abort(404);
         }
