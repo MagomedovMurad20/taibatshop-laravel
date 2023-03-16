@@ -16,26 +16,49 @@ class ProductSeeder extends Seeder
     {
         DB::table('products')->insert(
             [
-                'title' => 'Kurtka Nike',
-                'description' => 'Nike sport style, very comfortable and high quality',
-                'price' => '25000',
-                'img' => '/someurl',
-                'category_id' => '2',
-            ],
-            [
-                'title' => 'Kurtka Nike',
-                'description' => 'Nike sport style, very comfortable and high quality',
-                'price' => '25000',
-                'img' => '/someurl',
-                'category_id' => '2',
-            ],
-            [
-                'title' => 'Kurtka Nike',
-                'description' => 'Nike sport style, very comfortable and high quality',
-                'price' => '25000',
-                'img' => '/someurl',
-                'category_id' => '2',
-            ],
+                [
+                    'title' => 'Kurtka Nike',
+                    'description' => 'Nike sport style, very comfortable and high quality',
+                    'price' => '25000',
+                    'img' => '/someurl',
+                    'category_id' => '2',
+                ],
+                [
+                    'title' => 'Kurtka Nike2',
+                    'description' => 'Nike sport style, very comfortable and high quality',
+                    'price' => '25000',
+                    'img' => '/someurl',
+                    'category_id' => '2',
+                ],
+                [
+                    'title' => 'Kurtka Nike',
+                    'description' => 'Nike sport style, very comfortable and high quality',
+                    'price' => '25000',
+                    'img' => '/someurl',
+                    'category_id' => '2',
+                ],
+                [
+                    'title' => 'Kurtka Nike',
+                    'description' => 'Nike sport style, very comfortable and high quality',
+                    'price' => '25000',
+                    'img' => '/someurl',
+                    'category_id' => '2',
+                ],
+                [
+                    'title' => 'Kurtka Nike',
+                    'description' => 'Nike sport style, very comfortable and high quality',
+                    'price' => '25000',
+                    'img' => '/someurl',
+                    'category_id' => '2',
+                ],
+                [
+                    'title' => 'Kurtka Nike',
+                    'description' => 'Nike sport style, very comfortable and high quality',
+                    'price' => '25000',
+                    'img' => '/someurl',
+                    'category_id' => '2',
+                ],
+            ]
         );
     }
 }

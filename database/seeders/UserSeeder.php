@@ -16,10 +16,19 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            'name' => 'test',
-            'email' => 'test@test.com',
-            'password' => '12345Qwerty,,',
-        ]);
+        DB::table('users')->insert(
+            [
+                [
+                    'name' => 'test',
+                    'email' => 'test@test.com',
+                    'password' => '12345Qwerty,,',
+                ],
+                [
+                    'name' => 'test2',
+                    'email' => 'tessst@test.com',
+                    'password' => '12345Qwerty,,',
+                ]
+            ]
+        );
     }
 }
