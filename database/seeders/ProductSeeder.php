@@ -14,13 +14,28 @@ class ProductSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('products')->insert([
-            'product_id' => '122',
-            'title' => 'Kurtka Nike',
-            'description' => 'Nike sport style, very comfortable and high quality',
-            'price' => '25000',
-            'img' => '/someurl',
-            'category_id' => '2',
-        ]);
+        DB::table('products')->insert(
+            [
+                'title' => 'Kurtka Nike',
+                'description' => 'Nike sport style, very comfortable and high quality',
+                'price' => '25000',
+                'img' => '/someurl',
+                'category_id' => '2',
+            ],
+            [
+                'title' => 'Kurtka Nike',
+                'description' => 'Nike sport style, very comfortable and high quality',
+                'price' => '25000',
+                'img' => '/someurl',
+                'category_id' => '2',
+            ],
+            [
+                'title' => 'Kurtka Nike',
+                'description' => 'Nike sport style, very comfortable and high quality',
+                'price' => '25000',
+                'img' => '/someurl',
+                'category_id' => '2',
+            ],
+        );
     }
 }
